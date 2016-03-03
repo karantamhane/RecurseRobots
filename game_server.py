@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import RecurseRobotClient as RRC
 
 class Server(Object):
@@ -8,8 +10,8 @@ class Server(Object):
   def register_robot(self, robot_description):
     # Instantiate and return robot object as per description
     r = RRC.Robot(robot_description)
-    key = RRC.make_nonce(r)
-    self.robots[key] = r
+    robot_id = RRC.make_id(r)
+    self.robots[robot_id] = r
 
   def get_position(self, robot_id):
     # Return robot position
