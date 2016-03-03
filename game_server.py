@@ -12,7 +12,7 @@ class Server(Object):
   # These methods are remote-facing
   def register_robot(self, robot_description, conn):
     # Instantiate and return robot object as per description
-    r = RRC.Robot(robot_description)
+    r = RRC.Robot(robot_description, conn)
     robot_id = RRC.make_id(r)
     self.robots[robot_id] = r
     msg = make_message(query=register, tipe=reply, body=robot_id)
