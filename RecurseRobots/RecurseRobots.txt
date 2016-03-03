@@ -1,0 +1,30 @@
+Recurse Robots
+
+Python!!
+
+Design - 
+Server - Client (Robots) with queries and actions that are string-based.
+Clients register with server before the game - with their descriptions
+Simultaneous thread-based communication - one thread per client
+Classes for robot components - Parent class is Robot
+Mover (speed, energy cost, inertia) - Wheels, Thrusters, Legs
+Damager (damage) - 
+Ranged - Rockets, Bullets, Lasers, Flamethrowers, Ninja star
+Close-quarters - Blade, Hammer, Nunchucks
+Chasis (size, weight, fuel capacity) - 
+Sensors - Radar, Vision (range)
+Armor - Shields (passive and active
+Arena - textures, obstacles
+Kivy for GUI
+Game art - TBD. Start with CircleBot
+Mechanics - Client -> description to server -> 
+
+Start with 2 robots in a simple arena in opposite corners.
+
+Server description - 
+Methods - 
+register_robot -> instantiate robot object
+get_position -> current postition
+request_move(direction, magnitude) -> new position if legal
+attack -> fire weapon
+observe -> objects in range
